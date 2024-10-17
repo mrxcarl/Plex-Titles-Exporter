@@ -7,8 +7,8 @@ import pandas as pd
 def fetch_titles():
     try:
         plex = PlexServer(url_entry.get(), token_entry.get())
-        movies = plex.library.section('More Movies').all()
-        shows = plex.library.section('Other TV Shows').all()
+        movies = plex.library.section('Movies').all()
+        shows = plex.library.section('TV Shows').all()
 
         movie_titles = [movie.title for movie in movies]
         show_titles = [show.title for show in shows]
